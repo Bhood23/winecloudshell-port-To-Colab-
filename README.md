@@ -1,5 +1,5 @@
-# winecloudshell
-Install wine on Google Cloud Shell, together with winetricks, xfce4, and VNC through ngrok
+# winecloudshell-port-To-Colab Originaly Made By @raspduino
+Install wine on Google Colab, together with winetricks, xfce4, and VNC through ngrok
 
 # I want to install it now!
 [![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://shell.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fraspiduino%2Fwinecloudshell&cloudshell_git_branch=main&cloudshell_tutorial=README.md)
@@ -7,8 +7,11 @@ Install wine on Google Cloud Shell, together with winetricks, xfce4, and VNC thr
 # How to run it?
 
 ```
-chmod +x wcs.sh
-./wcs.sh
+!sudo apt install git wget
+!git clone https://github.com/Bhood23/winecloudshell-port-To-Colab-.git
+winecloudshell-port-To-Colab-
+!chmod +x wcs.sh
+!./wcs.sh
 ```
 
 It will prompt you some questions, so prepare for that, and look carefully for the prompt, especially before the long xfce log appear (you might miss that, for sure) :)
