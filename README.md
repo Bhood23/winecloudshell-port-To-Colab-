@@ -11,7 +11,7 @@ Have !bash wcs.sh instead of !./wcs.sh
 ```
 !sudo apt install git wget
 !git clone https://github.com/Bhood23/winecloudshell-port-To-Colab-.git
-winecloudshell-port-To-Colab-
+!cd winecloudshell-port-To-Colab-
 !chmod +x wcs.sh
 !bash wcs.sh
 ```
