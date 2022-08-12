@@ -5,34 +5,34 @@
 #############################################################
 
 # Install vncserver & xfce4
-!echo Installing vncserver and xfce4...
-!sudo apt update
-!sudo apt install tigervnc-standalone-server xfce4 xfce4-terminal xfce4-taskmanager dbus-x11 --no-install-recommends -y
+echo Installing vncserver and xfce4...
+sudo apt update
+sudo apt install tigervnc-standalone-server xfce4 xfce4-terminal xfce4-taskmanager dbus-x11 --no-install-recommends -y
 
 # Setup wine apt repo
-!echo Adding wine repo...
-!sudo dpkg --add-architecture i386
-!sudo wget -nc -O /usr/share/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
-!sudo wget -nc -P /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/dists/bullseye/winehq-bullseye.sources
-!sudo apt update
+echo Adding wine repo...
+sudo dpkg --add-architecture i386
+sudo wget -nc -O /usr/share/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
+sudo wget -nc -P /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/dists/bullseye/winehq-bullseye.sources
+sudo apt update
 
 # Install wine
-!echo Installing wine...
-!sudo apt install --install-recommends winehq-devel -y
+echo Installing wine...
+sudo apt install --install-recommends winehq-devel -y
 
 # Get ngrok
-!wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
-!tar -xvf ngrok-v3-stable-linux-amd64.tgz
-!chmod +x ./ngrok
-!sudo mv ngrok /usr/bin/ # Move to /usr/bin
-!rm ngrok-v3-stable-linux-amd64.tgz # Clean up
+wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
+tar -xvf ngrok-v3-stable-linux-amd64.tgz
+chmod +x ./ngrok
+sudo mv ngrok /usr/bin/ # Move to /usr/bin
+rm ngrok-v3-stable-linux-amd64.tgz # Clean up
 
 # ngrok login
-!echo Now go to https://dashboard.ngrok.com/get-started/setup and find your token in step 2, then put it here: 
+echo Now go to https://dashboard.ngrok.com/get-started/setup and find your token in step 2, then put it here: 
 read token
 
 # Check if the user actually copy the whole add-authtoken command or just the token itself
-!if [[ $token == *"add-authtoken"* ]]; then
+if [[ $token == *"add-authtoken"* ]]; then
     $token
 else
 	ngrok config add-authtoken $token
