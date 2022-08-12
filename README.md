@@ -1,5 +1,7 @@
 # winecloudshell-port-To-Colab Originaly Made By @raspduino
 Install wine on Google Colab, together with winetricks, xfce4, and VNC through ngrok
+Thanks To @raspduino For The Og Repo And Telling Me to 
+Have !bash wcs.sh instead of !./wcs.sh 
 
 # I want to install it now!
 [![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://shell.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fraspiduino%2Fwinecloudshell&cloudshell_git_branch=main&cloudshell_tutorial=README.md)
@@ -20,7 +22,7 @@ It will prompt you some questions, so prepare for that, and look carefully for t
 Each time you choose to set `WINEPREFIX` to `/tmp/wineprefix`, it will append a new line
 
 ```
-export WINEPREFIX=/tmp/wineprefix
+!export WINEPREFIX=/tmp/wineprefix
 ```
 
 to your `~/.bashrc`.
