@@ -30,7 +30,7 @@ rm ngrok-v3-stable-linux-amd64.tgz # Clean up
 # ngrok login
 echo Now go to https://dashboard.ngrok.com/get-started/setup and find your token in step 2, then put it here: 
 read token
-input()
+
 # Check if the user actually copy the whole add-authtoken command or just the token itself
 if [[ $token == *"add-authtoken"* ]]; then
     $token
