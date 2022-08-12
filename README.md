@@ -11,7 +11,7 @@ Install wine on Google Colab, together with winetricks, xfce4, and VNC through n
 !git clone https://github.com/Bhood23/winecloudshell-port-To-Colab-.git
 winecloudshell-port-To-Colab-
 !chmod +x wcs.sh
-!./wcs.sh
+!bash wcs.sh
 ```
 
 It will prompt you some questions, so prepare for that, and look carefully for the prompt, especially before the long xfce log appear (you might miss that, for sure) :)
