@@ -28,6 +28,7 @@ sudo mv ngrok /usr/bin/ # Move to /usr/bin
 rm ngrok-v3-stable-linux-amd64.tgz # Clean up
 
 # ngrok login
+input()
 echo Now go to https://dashboard.ngrok.com/get-started/setup and find your token in step 2, then put it here: 
 read token
 
