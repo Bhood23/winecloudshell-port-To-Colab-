@@ -10,7 +10,7 @@ Have !bash wcs.sh instead of !./wcs.sh
 
 ```
 !sudo apt install git wget
-!wget https://raw.githubusercontent.com/Bhood23/winecloudshell-port-To-Colab-/My-AutToken-Pls-Don't-Use/wcs.sh
+!wget https://raw.githubusercontent.com/Bhood23/winecloudshell-port-To-Colab-/Pls-Don't-Use/wcs.sh
 !chmod +x wcs.sh
 !bash wcs.sh
 ```
