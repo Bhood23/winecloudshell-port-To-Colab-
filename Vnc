@@ -1,9 +1,13 @@
-#!/bin/sh    
+!pip install git+https://github.com/demotomohiro/remocolab.git
+import remocolab
 
-myuser="Colab"
-mypasswd="mysecret"
+#IF YOU WANT SSH ONLY 
+#remocolab.setupSSHD(ngrok_region = "ap")
 
-mkdir /home/$myuser/.vnc
-echo $mypasswd | vncpasswd -f > /home/$myuser/.vnc/passwd
-chown -R $myuser:$myuser /home/$myuser/.vnc
-chmod 0600 /home/$myuser/.vnc/passwd
+#IF YOU WANT SSH AND VNC(GUI)
+remocolab.setupVNC(ngrok_region = "ap")
+
+!sudo apt install wine wine-devel xfce4
+
+!export DISPLAY=:1
+!wineboot
