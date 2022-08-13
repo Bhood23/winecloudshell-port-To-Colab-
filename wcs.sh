@@ -9,14 +9,14 @@ echo Installing vncserver and xfce4...
 sudo apt update
 sudo apt install tigervnc-standalone-server tigervnc-common xfce4 xfce4-terminal xfce4-taskmanager dbus-x11 --no-install-recommends -y
 
-!pip install git+https://github.com/demotomohiro/remocolab.git
+pip install git+https://github.com/demotomohiro/remocolab.git
 import remocolab
 
 #IF YOU WANT SSH ONLY 
 #remocolab.setupSSHD(ngrok_region = "ap")
 
 #IF YOU WANT SSH AND VNC(GUI)
-remocolab.setupVNC(ngrok_region = "ap")
+python remocolab.setupVNC(ngrok_region = "ap")
 
 # Setup wine apt repo
 echo Adding wine repo...
