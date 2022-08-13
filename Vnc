@@ -1,0 +1,9 @@
+#!/bin/sh    
+
+myuser="Colab"
+mypasswd="mysecret"
+
+mkdir /home/$myuser/.vnc
+echo $mypasswd | vncpasswd -f > /home/$myuser/.vnc/passwd
+chown -R $myuser:$myuser /home/$myuser/.vnc
+chmod 0600 /home/$myuser/.vnc/passwd
