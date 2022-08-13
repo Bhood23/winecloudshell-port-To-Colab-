@@ -7,7 +7,7 @@
 # Install vncserver & xfce4
 echo Installing vncserver and xfce4...
 sudo apt update
-sudo apt install tigervnc-standalone-server xfce4 xfce4-terminal xfce4-taskmanager dbus-x11 --no-install-recommends -y
+sudo apt install tigervnc-standalone-server tigervnc-common xfce4 xfce4-terminal xfce4-taskmanager dbus-x11 --no-install-recommends -y
 
 # Setup wine apt repo
 echo Adding wine repo...
@@ -47,7 +47,7 @@ xfce4-session &
 # Google Cloud Shell has a really small /home parition (5GB), so you might need to change the WINEPREFIX to somewhere else
 echo Google Cloud Shell has a small partition of 5GB, would you wish to set WINEPREFIX to /tmp, which has much more space?
 echo Please note that data outside $HOME will be deleted after each Google Cloud Shell session.
-read -p "Your choice [y/N]: " answer
+
 
 if [ "$answer" != "${answer#[Yy]}" ] ; then
     mkdir /tmp/wineprefix
